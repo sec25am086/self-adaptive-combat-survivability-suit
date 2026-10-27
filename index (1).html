@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adaptive Camouflage Suit Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Self-Adaptive AI-Driven Combat Survivability Suit</h1>
+    <p>Sense &rarr; Process &rarr; Control &rarr; Adapt</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Collector</h2>
+      <p>Status: <strong id="collector-status">Stopped</strong></p>
+      <button id="btn-start">Start</button>
+      <button id="btn-stop">Stop</button>
+    </section>
+
+    <section class="card">
+      <h2>Sensor Values</h2>
+      <ul id="sensor-list">
+        <li>Temperature: <span id="s-temp">--</span> &deg;C</li>
+        <li>Humidity: <span id="s-hum">--</span> %</li>
+        <li>PM2.5: <span id="s-pm">--</span></li>
+        <li>Gas: <span id="s-gas">--</span> ppm</li>
+        <li>Light: <span id="s-light">--</span> lux</li>
+      </ul>
+      <button id="btn-refresh">Refresh</button>
+    </section>
+
+    <section class="card">
+      <h2>Terrain Detection</h2>
+      <input type="file" id="image-input" accept="image/*">
+      <button id="btn-detect">Detect</button>
+      <p id="detect-result">Upload an image to detect terrain.</p>
+      <div id="matrix" class="matrix"></div>
+    </section>
+
+    <section class="card">
+      <h2>Sample Data</h2>
+      <button id="btn-data">Read sample CSV</button>
+      <table id="data-table"></table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
